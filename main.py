@@ -1,5 +1,3 @@
-# python main.py
-
 import math
 from PIL import Image
 
