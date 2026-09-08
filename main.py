@@ -39,30 +39,22 @@ def normalize(a):
 def vec_scale(s, a):
     return (s*a[0], s*a[1], s*a[2]) 
 
-# ==================================
-# 各種パラメータの設定
-# ==================================
-
-# カメラについて
+# カメラの設定
 camera_pos   = (3, 2, 5)   # カメラの位置
 camera_focus = (1, 1, 1)   # カメラの注視点
 
-# 球について
+# 球（物体）の設定
 sphere_pos = (2, 1, 2)     # 球の中心位置
 radius     = 1             # 球の半径
 (red, green, blue) = (0, 0, 255)
 
-# 光源の位置
+# 光源の設定
 light_pos = (4, 3, 2)
 
-# 画像サイズ
+# 画像サイズ設定
 width  = 200
 height = 200
 img = Image.new("RGB", (width, height))
-
-# ==================================
-# カメラ座標系の構築
-# ==================================
 
 # カメラの前方向ベクトルを計算
 camera_forward_vec = vec_sub(camera_focus, camera_pos)  
